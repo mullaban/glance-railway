@@ -7,7 +7,7 @@ This is a fork of the entire glanceapp/glance codebase. The `Dockerfile` has bee
 
 I created this as alternative to the existing Docker Glance template because it didn't work for me. Even if it had, only allowed for me to link to one configuration file. Multiple files are nicer if you want to host multiple pages.
 
-![](docs/images/readme-main-image.png)
+![](docs/images/glance-railway-dashboard-example.png)
 
 ## Features
 ### Various widgets

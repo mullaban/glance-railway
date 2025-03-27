@@ -1,0 +1,156 @@
+- name: Home
+  # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
+  # hide-desktop-navigation: true
+  columns:
+    - size: small
+      widgets:
+        - type: clock
+          hour-format: 12h
+
+        - type: weather
+          units: imperial # alternatively "metric"
+          hour-format: 12h # alternatively "24h"
+          # Optionally hide the location from being displayed in the widget
+          hide-location: true
+
+        - type: releases
+          cache: 1d
+          # Without authentication the Github API allows for up to 60 requests per hour. You can create a
+          # read-only token from your Github account settings and use it here to increase the limit.
+          # token: ...
+          repositories:
+            - glanceapp/glance
+            - siyuan-note/siyuan
+            - LazyVim/LazyVim
+            - facebook/react
+            - bigskysoftware/htmx
+            - TanStack/router
+
+        - type: twitch-channels
+          channels:
+            - GamesDoneQuick
+            - nyanners
+            - NeilCic
+            - cohhcarnage
+
+    - size: full
+      widgets:
+        - type: group
+          widgets:
+            - type: rss
+              title: The Craft
+              limit: 15
+              collapse-after: 5
+              cache: 12h
+              feeds:
+                - url: https://blog.incrementalforgetting.tech/feed
+                  title: Incremental Forgetting
+                - url: https://www.saiyangrowthletter.com/feed
+                  title: The Codist
+                - url: https://blog.pragmaticengineer.com/rss
+                  title: The Pragmatic Engineer
+                - url: https://blog.railway.com/rss.xml
+                  title: Railway Blog
+            - type: rss
+              title: Trivia
+              limit: 15
+              collapse-after: 5
+              cache: 12h
+              feeds:
+                - url: https://acoup.blog/feed
+                  title: ACOUP
+
+        - type: videos
+          channels:
+            - UCsBjURrPoezykLs9EqgamOA # Fireship
+
+        - type: group
+          widgets:
+            - type: hacker-news
+            - type: lobsters
+
+        - type: group
+          title: Reddit
+          widgets:
+            - type: reddit
+              subreddit: technology
+              show-thumbnails: true
+            - type: reddit
+              subreddit: selfhosted
+              show-thumbnails: true
+            - type: reddit
+              subreddit: homelab
+              show-thumbnails: true
+            - type: reddit
+              subreddit: news
+              show-thumbnails: true
+            - type: reddit
+              subreddit: EnoughMuskSpam
+              show-thumbnails: true
+            - type: reddit
+              subreddit: react
+              show-thumbnails: true
+            - type: reddit
+              subreddit: htmx
+              show-thumbnails: true
+            - type: reddit
+              subreddit: golang
+              show-thumbnails: true
+            - type: reddit
+              subreddit: reactnative
+              show-thumbnails: true
+            - type: reddit
+              subreddit: android
+              show-thumbnails: true
+
+    - size: small
+      widgets:
+        - type: bookmarks
+          groups:
+            - title: Entertainment
+              color: 6 100 68
+              links:
+                - title: YouTube
+                  url: https://www.youtube.com/
+                - title: Nebula
+                  url: https://www.nebula.tv/featured
+                - title: Patreon
+                  url: https://www.patreon.com/home
+            - title: Social
+              color: 125 100 68
+              links:
+                - title: Bluesky
+                  url: https://bsky.app
+                - title: Reddit
+                  url: https://www.reddit.com/
+            - title: Tech
+              color: 185 100 68
+              links:
+                - title: Daily.dev
+                  url: https://app.daily.dev/
+                - title: Railway Station
+                  url: https://station.railway.com/
+            - title: Depression
+              links:
+                - title: Project 2025 Tracker
+                  url: https://www.project2025.observer/
+
+        - type: markets
+          title: Retweet to die faster
+          markets:
+            - symbol: DX=F
+              name: US Dollar
+            - symbol: ^IXIC
+              name: NASDAQ
+            - symbol: SPY
+              name: S&P 500
+            - symbol: TSLA
+              name: Tesla
+            - symbol: NVDA
+              name: NVIDIA
+            - symbol: AAPL
+              name: Apple
+            - symbol: MSFT
+              name: Microsoft
+            - symbol: BTC-USD
+              name: Bitcoin

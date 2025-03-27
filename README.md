@@ -2,6 +2,11 @@
 <h1 align="center">Glance</h1>
 <p align="center"><a href="#installation">Install</a> • <a href="docs/configuration.md">Configuration</a> • <a href="docs/preconfigured-pages.md">Preconfigured pages</a> • <a href="docs/themes.md">Themes</a> • <a href="https://discord.com/invite/7KQ7Xa9kJd">Discord</a></p>
 
+## Railway
+This is a fork of the entire glanceapp/glance codebase. The `Dockerfile` has been tweaked to copy over and build your dashboard based on the files in `config/`. You should be able to get a dashboard up and running on Railway immediately, then eject to a GitHub repo of your own and edit your configuration files from there.
+
+I created this as alternative to the existing Docker Glance template because it didn't work for me. Even if it had, only allowed for me to link to one configuration file. Multiple files are nicer if you want to host multiple pages.
+
 ![](docs/images/readme-main-image.png)
 
 ## Features

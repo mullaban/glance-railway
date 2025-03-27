@@ -8,10 +8,11 @@
           hour-format: 12h
 
         - type: weather
+          location: Saint Paul, Minnesota, United States
           units: imperial # alternatively "metric"
           hour-format: 12h # alternatively "24h"
           # Optionally hide the location from being displayed in the widget
-          hide-location: true
+          # hide-location: true
 
         - type: releases
           cache: 1d

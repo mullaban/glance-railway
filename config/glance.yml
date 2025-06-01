@@ -33,3 +33,15 @@ widgets:
     feeds:
       - url: https://www.lmfm.ie/feed/
       - url: https://www.independent.ie/regionals/louth/feed/
+
+- type: custom-api
+  title: GBP to EUR
+  url: https://api.exchangerate-api.com/v4/latest/GBP
+  template: |
+    <div>1 GBP = {{ (index .rates "EUR") | printf "%.2f" }} EUR</div>
+
+  - type: custom-api
+  title: Air Quality
+  url: https://airquality.ie/station/EPA-23  # Need to find JSON endpoint
+  template: |
+    <div>Air Quality: {{ .status }}</div>
